@@ -75,6 +75,7 @@ public class FragmentFirst extends Fragment {
         View view = inflater.inflate(R.layout.fragment_first, container, false);
         tvFrag1 = view.findViewById(R.id.tvFrag1);
         tv2Frag1 = view.findViewById(R.id.tv2Frag1);
+        etSMSNum = view.findViewById(R.id.etSMSNum);
         btnAddTextFrag1 = view.findViewById(R.id.btnRetrieveTextFrag1);
 
         btnAddTextFrag1.setOnClickListener(new View.OnClickListener() {
@@ -103,9 +104,9 @@ public class FragmentFirst extends Fragment {
                 ContentResolver cr = getActivity().getContentResolver();
 
                 // The filter String
-                String filter="body LIKE ? AND body LIKE ?";
+                String filter="body LIKE ?";
                 // The matches for the ?
-                String[] filterArgs = {"%" + etSMSNum +"%"};
+                String[] filterArgs = {"%" + etSMSNum.getText().toString() +"%"};
                 // Fetch SMS Message from Built-in Content Provider
                 Cursor cursor = cr.query(uri, reqCols, filter, filterArgs, null);
                 String smsBody = "";
