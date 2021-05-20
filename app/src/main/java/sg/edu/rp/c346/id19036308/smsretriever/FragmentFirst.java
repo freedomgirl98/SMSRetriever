@@ -78,6 +78,7 @@ public class FragmentFirst extends Fragment {
         etSMSNum = view.findViewById(R.id.etSMSNum);
         btnAddTextFrag1 = view.findViewById(R.id.btnRetrieveTextFrag1);
 
+
         btnAddTextFrag1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -81,6 +81,8 @@ public class FragmentSecond extends Fragment {
         tvSMS = view.findViewById(R.id.tvDisplay);
         btnRetrieve = view.findViewById(R.id.btnWord);
 
+        String editWord = etWord.getText().toString();
+
         btnRetrieve.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -103,6 +105,8 @@ public class FragmentSecond extends Fragment {
                 //Get Content Resolver object from which to
                 //query the content provider
                 ContentResolver cr = getActivity().getContentResolver();
+
+
 
                 //The filter
                 String filter = "body LIKE ?";
