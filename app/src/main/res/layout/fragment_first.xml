@@ -4,20 +4,28 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#BBFFFF"
     tools:context=".FragmentFirst">
 
     <!-- TODO: Update blank fragment layout -->
 
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/tvFrag1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:text="Only SMS containing this number" />
+
+    <EditText
+        android:id="@+id/etSMSNum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnRetrieveTextFrag1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button" />
+        android:text="Retrieve SMS" />
 </LinearLayout>
